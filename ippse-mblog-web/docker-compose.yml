@@ -1,0 +1,14 @@
+version: '3.6'
+
+services:
+  web:
+    image: 127.0.0.1:5000/ippse-mblog-web:latest
+    ports:
+      - "7010:7010"
+    networks:
+      ippse:
+        aliases:
+          - ippse-mblog-web
+networks:
+  ippse:
+    external: true

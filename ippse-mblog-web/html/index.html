@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/material-icons.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/dropzone.css">
+
+    <title>B4最开始</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">博客</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbarColor01" style="">
+                <div class="navbar-nav mr-auto">
+                </div>
+                <form class="form-inline m-0">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">登录 / 注册<span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="in-head">
+                <div class="card in-back mb-3">
+                    <div class="card-header in-header">
+                        <a href="" class="in-header-img-position"><img src="./images/images.png" alt="" class="in-fang"></a>
+                    </div>
+                    <div class="card-body pt-2">
+                        <div style="margin-left: 90px;">
+                            <h5 class="m-0">Custer</h5>
+                            <p>@Custer</p>
+                        </div>
+                        <div class="d-flex">
+                            <div class="flex-1">
+                                <p class="user_p">推文</p>
+                                <div class="user_p_num">12</div>
+                            </div>
+                            <div class="flex-1">
+                                <p class="user_p">跟随者</p>
+                                <div class="user_p_num">12</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="card in-load">
+                    <div class="card-body flex-column">
+                        <div class="input-group d-flex">
+                            <a class="in-d mr-4 max-576" href="#" class="mr-3">
+                                <img class="in-d" src="./images/images.png" alt="">
+                            </a>
+                            <div class="textarea-mr">
+                                <div class="position-relative border-1-ced4da">
+                                    <div class="position-relative">
+                                        <textarea class="form-control wishContent border-none" aria-label="With textarea"
+                                            placeholder="请输入不超过99个字" maxlength="99" rows="4"></textarea>
+                                        <span class="wordsNum">0/99</span>
+                                    </div>
+                                    <div id="upload_box" class="over-flow"></div>
+                                </div>
+                                <div class="upload-btn-group mt-3 d-flex justify-content-between">
+                                    <div class="d-flex">
+                                        <a href="javascript:void(0);" data-imageupload>
+                                            <i class="material-icons">photo</i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fa fa-map-marker"></i>
+                                        </a>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a href="" class="mr-4" data-toggle="modal" data-target="#exampleModal2">
+                                            <i class="material-icons">add_circle_outline</i>
+                                        </a>
+                                        <i class="material-icons position-relative send-top color-dark">send</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">合并发送</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body d-flex" id="clone_div">
+                                    <a class="in-d mr-4 max-576" href="#" class="mr-3">
+                                        <img class="in-d" src="./images/images.png" alt="">
+                                    </a>
+                                    <div class="textarea-mr">
+                                        <div class="position-relative">
+                                            <textarea class="form-control wishContent" aria-label="With textarea"
+                                                placeholder="请输入不超过99个字" maxlength="99" rows="3"></textarea>
+                                            <span class="wordsNum">0/99</span>
+                                        </div>
+                                        <div class="upload-btn-group mt-3 d-flex justify-content-between">
+                                            <div class="d-flex">
+                                                <a href="">
+                                                    <i class="material-icons">photo</i>
+                                                </a>
+                                                <a href="">
+                                                    <i class="fa fa-map-marker"></i>
+                                                </a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <i class="material-icons position-relative send-top color-dark">send</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <i class="material-icons mr-3 clone-btn" onclick="clone_fun()">add_circle_outline</i>
+                                    <button type="button" class="btn btn-primary">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--row end-->
+                </div>
+                <!--card end-->
+
+                <div class="in-card card-body d-flex">
+                    <a class="in-d mr-4 max-576" href="#"><img class="in-d" src="./images/images.png" alt=""></a>
+                    <div class="textarea-mr card-body">
+                        <div class="anthor-forward">
+                            <i class="fa fa-share-square-o"></i>
+                            <span>Custer 转推了</span>
+                        </div>
+                        <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span class="in-te">·
+                                55m</span>
+                        </h5>
+                        <p class="card-text">
+                            这两颗卫星属于中圆地球轨道卫星，是中国北斗三号全球系统第13、14颗组网卫星。在这两颗北斗导航卫星上，还首次装载了国际搜救组织标准设备，将为全球用户提供遇险报警及定位服务。</p>
+                        <div class="b-action">
+                            <div class="b-action-left in-menu d-flex justify-content-between max-768-column">
+                                <div>
+                                    <a class="color-fun" href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalLongd">
+                                        <i class="fa fa-commenting-o te-fa"><span class="in-twelf">0.1K</span></i>
+                                    </a>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModalLongd" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalLongTitleo" aria-hidden="true" style="display: none;">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitleo">回复框</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="textarea-mr card-body">
+                                                        <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span
+                                                                class="in-te">· 55m</span>
+                                                        </h5>
+                                                        <p class="card-text">
+                                                            这两颗卫星属于中圆地球轨道卫星，是中国北斗三号全球系统第13、14颗组网卫星。在这两颗北斗导航卫星上，还首次装载了国际搜救组织标准设备，将为全球用户提供遇险报警及定位服务。</p>
+                                                    </div>
+                                                </div>
+                                                <!--row end-->
+                                                <div class="card in-background">
+                                                    <div class="card-body pt-0">
+                                                        <p class="in-pap">
+                                                            <font>回复</font><a href="#">@ realDonaldTrump</a>
+                                                        </p>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+
+                                                            </div>
+                                                            <textarea class="form-control wishContent" aria-label="With textarea"
+                                                                placeholder="请输入不超过99个字" maxlength="99" rows="3"></textarea>
+                                                            <span class="wordsNum">0/99</span>
+                                                        </div>
+                                                        <div class="b-action">
+                                                            <div class="b-action-left">
+                                                                <button type="button" class="btn btn-primary mt-3 mb-3">发送
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Button trigger modal -->
+                                    <a class="color-fun" href="javascript:void(0)" data-toggle="modal" data-target="#gridSystemModald">
+                                        <i class="fa fa-random te-fa"><span class="in-twelf">30K</span></i>
+                                    </a>
+
+                                    <div id="gridSystemModald" class="modal fade show" tabindex="-1" role="dialog"
+                                        aria-labelledby="gridModalLabelesd" aria-modal="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="gridModalLabelesd">转发给你的粉丝</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                            aria-hidden="true">×</span></button>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="textarea-mr card-body">
+                                                        <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span
+                                                                class="in-te"> · 55m</span>
+                                                        </h5>
+                                                        <p class="card-text">将为全球用户提供遇险报警及定位服务在这两颗北斗导航卫星上，还首。</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body pt-0">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                        </div>
+                                                        <textarea class="form-control wishContent" aria-label="With textarea"
+                                                            placeholder="请输入不超过99个字" rows="3" maxlength="99"></textarea>
+                                                        <span class="wordsNum">0/99</span>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary">转推</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="color-fun" href="javascript:void(0)">
+                                        <i class="fa fa-heart-o te-fa"><span class="in-twelf">12K</span></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--row end-->
+                </div>
+                <!--card end-->
+                <div class="in-card d-flex card-body">
+                    <a class="in-d mr-4 max-576" href="#"><img class="in-d" src="./images/images.png" alt=""></a>
+                    <div class="textarea-mr card-body">
+                        <div class="anthor-forward">
+                            <i class="fa fa-handshake-o"></i>
+                            <span>Custer 分享了</span>
+                        </div>
+                        <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span class="in-te">·
+                                55m</span>
+                        </h5>
+                        <p class="card-text">
+                            这两颗卫星属于中圆地球轨道卫星，是中国北斗三号全球系统第13、14颗组网卫星。在这两颗北斗导航卫星上，还首次装载了国际搜救组织标准设备，将为全球用户提供遇险报警及定位服务。
+                        </p>
+                        <div class="card mb-3 w-78-15">
+                            <!-- <img class="card-img-top" src="./images/1.png" alt="Card image cap"> -->
+                            <div class="card-img-div" style="background-image: url('./images/1.png')"></div>
+                            <div class="card-body">
+                                <p class="card-text">这两颗卫星属于中圆地球轨道卫星，是中国北斗三号全球系统第13、14颗组网卫星。在这两颗北斗导航卫星上，还首次装载了国际搜救组织标准设备，将为全球用户提供遇险报警及定位服务。</p>
+                            </div>
+                        </div>
+                        <div class="b-action">
+                            <div class="b-action-left in-menu d-flex justify-content-between max-768-column">
+                                <div>
+                                    <a class="color-fun" href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalLongd">
+                                        <i class="fa fa-commenting-o te-fa"><span class="in-twelf">0.1K</span></i>
+                                    </a>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModalLongd" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalLongTitleo" aria-hidden="true" style="display: none;">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitleo">回复框</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="textarea-mr card-body">
+                                                        <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span
+                                                                class="in-te">· 55m</span>
+                                                        </h5>
+                                                        <p class="card-text">
+                                                            这两颗卫星属于中圆地球轨道卫星，是中国北斗三号全球系统第13、14颗组网卫星。在这两颗北斗导航卫星上，还首次装载了国际搜救组织标准设备，将为全球用户提供遇险报警及定位服务。</p>
+                                                    </div>
+                                                </div>
+                                                <!--row end-->
+                                                <div class="card in-background">
+                                                    <div class="card-body pt-0">
+                                                        <p class="in-pap">
+                                                            <font>回复</font><a href="#">@ realDonaldTrump</a>
+                                                        </p>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+
+                                                            </div>
+                                                            <textarea class="form-control wishContent" aria-label="With textarea"
+                                                                placeholder="请输入不超过99个字" maxlength="99" rows="3"></textarea>
+                                                            <span class="wordsNum">0/99</span>
+                                                        </div>
+                                                        <div class="b-action">
+                                                            <div class="b-action-left">
+                                                                <button type="button" class="btn btn-primary mt-3 mb-3">发送
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Button trigger modal -->
+                                    <a class="color-fun" href="javascript:void(0)" data-toggle="modal" data-target="#gridSystemModald">
+                                        <i class="fa fa-random te-fa"><span class="in-twelf">30K</span></i>
+                                    </a>
+
+                                    <div id="gridSystemModald" class="modal fade show" tabindex="-1" role="dialog"
+                                        aria-labelledby="gridModalLabelesd" aria-modal="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="gridModalLabelesd">转发给你的粉丝</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                            aria-hidden="true">×</span></button>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="textarea-mr card-body">
+                                                        <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span
+                                                                class="in-te"> · 55m</span>
+                                                        </h5>
+                                                        <p class="card-text">将为全球用户提供遇险报警及定位服务在这两颗北斗导航卫星上，还首。</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body pt-0">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                        </div>
+                                                        <textarea class="form-control wishContent" aria-label="With textarea"
+                                                            placeholder="请输入不超过99个字" rows="3" maxlength="99"></textarea>
+                                                        <span class="wordsNum">0/99</span>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary">转推</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="color-fun" href="javascript:void(0)">
+                                        <i class="fa fa-heart-o te-fa"><span class="in-twelf">12K</span></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--row end-->
+                </div>
+                <!--card end-->
+                <div class="in-card card-body multiple">
+                    <div class="d-flex">
+                        <a class="in-d mr-4 max-576" href="#"><img class="in-d" src="./images/images.png" alt=""></a>
+                        <div class="textarea-mr card-body">
+                            <!-- <div class="anthor-forward">
+                                <i class="fa fa-share-square-o"></i>
+                                <span>Custer 转推了</span>
+                            </div> -->
+                            <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span class="in-te">·
+                                    55m</span>
+                            </h5>
+                            <p class="card-text">
+                                这两颗卫星属于中圆地球轨道卫星，是中国北斗三号全球系统第13、14颗组网卫星。在这两颗北斗导航卫星上，还首次装载了国际搜救组织标准设备，将为全球用户提供遇险报警及定位服务。</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <a class="in-d mr-4 max-576" href="#"><img class="in-d" src="./images/images.png" alt=""></a>
+                        <div class="textarea-mr card-body">
+                            <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span class="in-te">·
+                                    55m</span>
+                            </h5>
+                            <p class="card-text">
+                                这两颗卫星属于中圆地球轨道卫星，是中国北斗三号全球系统第13、14颗组网卫星。在这两颗北斗导航卫星上，还首次装载了国际搜救组织标准设备，将为全球用户提供遇险报警及定位服务。</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <a class="in-d mr-4 max-576" href="#"><img class="in-d" src="./images/images.png" alt=""></a>
+                        <div class="textarea-mr card-body">
+                            <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span class="in-te">·
+                                    55m</span>
+                            </h5>
+                            <p class="card-text">
+                                这两颗卫星属于中圆地球轨道卫星，是中国北斗三号全球系统第13、14颗组网卫星。在这两颗北斗导航卫星上，还首次装载了国际搜救组织标准设备，将为全球用户提供遇险报警及定位服务。</p>
+                            <div class="b-action">
+                                <div class="b-action-left in-menu d-flex justify-content-between max-768-column">
+                                    <div class="b-action-left in-menu">
+                                        <a class="color-fun" href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalLongd">
+                                            <i class="fa fa-commenting-o te-fa"><span class="in-twelf">0.1K</span></i>
+                                        </a>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModalLongd" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLongTitleo" aria-hidden="true" style="display: none;">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLongTitleo">回复框</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">×</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="textarea-mr card-body">
+                                                            <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span
+                                                                    class="in-te">· 55m</span>
+                                                            </h5>
+                                                            <p class="card-text">
+                                                                这两颗卫星属于中圆地球轨道卫星，是中国北斗三号全球系统第13、14颗组网卫星。在这两颗北斗导航卫星上，还首次装载了国际搜救组织标准设备，将为全球用户提供遇险报警及定位服务。</p>
+                                                        </div>
+                                                    </div>
+                                                    <!--row end-->
+                                                    <div class="card in-background">
+                                                        <div class="card-body pt-0">
+                                                            <p class="in-pap">
+                                                                <font>回复</font><a href="#">@ realDonaldTrump</a>
+                                                            </p>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+
+                                                                </div>
+                                                                <textarea class="form-control wishContent" aria-label="With textarea"
+                                                                    placeholder="请输入不超过99个字" maxlength="99" rows="3"></textarea>
+                                                                <span class="wordsNum">0/99</span>
+                                                            </div>
+                                                            <div class="b-action">
+                                                                <div class="b-action-left">
+                                                                    <button type="button" class="btn btn-primary mt-3 mb-3">发送
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Button trigger modal -->
+                                        <a class="color-fun" href="javascript:void(0)" data-toggle="modal" data-target="#gridSystemModald">
+                                            <i class="fa fa-random te-fa"><span class="in-twelf">30K</span></i>
+                                        </a>
+
+                                        <div id="gridSystemModald" class="modal fade show" tabindex="-1" role="dialog"
+                                            aria-labelledby="gridModalLabelesd" aria-modal="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="gridModalLabelesd">转发给你的粉丝</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="textarea-mr card-body">
+                                                            <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span
+                                                                    class="in-te"> · 55m</span>
+                                                            </h5>
+                                                            <p class="card-text">将为全球用户提供遇险报警及定位服务在这两颗北斗导航卫星上，还首。</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body pt-0">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                            </div>
+                                                            <textarea class="form-control wishContent" aria-label="With textarea"
+                                                                placeholder="请输入不超过99个字" rows="3" maxlength="99"></textarea>
+                                                            <span class="wordsNum">0/99</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary">转推</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="color-fun" href="javascript:void(0)">
+                                            <i class="fa fa-heart-o te-fa"><span class="in-twelf">12K</span></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--row end-->
+                </div>
+                <!--card end-->
+                <div class="in-card d-flex card-body">
+                    <a class="in-d mr-4 max-576" href="#"><img class="in-d" src="./images/images.png" alt=""></a>
+                    <div class="textarea-mr card-body">
+                        <div class="anthor-forward">
+                            <i class="fa fa-share-square-o"></i>
+                            <span>Custer 转推了</span>
+                        </div>
+                        <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span class="in-te">·
+                                55m</span>
+                        </h5>
+                        <p class="card-text">
+                            这两颗卫星属于中圆地球轨道卫星，是中国北斗三号全球系统第13、14颗组网卫星。在这两颗北斗导航卫星上，还首次装载了国际搜救组织标准设备，将为全球用户提供遇险报警及定位服务。
+                        </p>
+                        <div class="img-div-3 w-78-15">
+                            <div style="background-image: url('./images/5.png')"></div>
+                            <div style="background-image: url('./images/5.png')"></div>
+                            <div style="background-image: url('./images/6.png')"></div>
+                            <div style="background-image: url('./images/6.png')"></div>
+                        </div>
+                        <div class="b-action">
+                            <div class="b-action-left in-menu">
+                                <a class="color-fun" href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalLongd">
+                                    <i class="fa fa-commenting-o te-fa"><span class="in-twelf">0.1K</span></i>
+                                </a>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModalLongd" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLongTitleo" aria-hidden="true" style="display: none;">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitleo">回复框</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="textarea-mr card-body">
+                                                    <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span
+                                                            class="in-te">· 55m</span>
+                                                    </h5>
+                                                    <p class="card-text">
+                                                        这两颗卫星属于中圆地球轨道卫星，是中国北斗三号全球系统第13、14颗组网卫星。在这两颗北斗导航卫星上，还首次装载了国际搜救组织标准设备，将为全球用户提供遇险报警及定位服务。</p>
+                                                </div>
+                                            </div>
+                                            <!--row end-->
+                                            <div class="card in-background">
+                                                <div class="card-body pt-0">
+                                                    <p class="in-pap">
+                                                        <font>回复</font><a href="#">@ realDonaldTrump</a>
+                                                    </p>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+
+                                                        </div>
+                                                        <textarea class="form-control wishContent" aria-label="With textarea"
+                                                            placeholder="请输入不超过99个字" maxlength="99" rows="3"></textarea>
+                                                        <span class="wordsNum">0/99</span>
+                                                    </div>
+                                                    <div class="b-action">
+                                                        <div class="b-action-left">
+                                                            <button type="button" class="btn btn-primary mt-3 mb-3">发送
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Button trigger modal -->
+                                <a class="color-fun" href="javascript:void(0)" data-toggle="modal" data-target="#gridSystemModald">
+                                    <i class="fa fa-random te-fa"><span class="in-twelf">30K</span></i>
+                                </a>
+
+                                <div id="gridSystemModald" class="modal fade show" tabindex="-1" role="dialog"
+                                    aria-labelledby="gridModalLabelesd" aria-modal="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="gridModalLabelesd">转发给你的粉丝</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                        aria-hidden="true">×</span></button>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="textarea-mr card-body">
+                                                    <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span
+                                                            class="in-te"> · 55m</span>
+                                                    </h5>
+                                                    <p class="card-text">将为全球用户提供遇险报警及定位服务在这两颗北斗导航卫星上，还首。</p>
+                                                </div>
+                                            </div>
+                                            <div class="card-body pt-0">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                    </div>
+                                                    <textarea class="form-control wishContent" aria-label="With textarea"
+                                                        placeholder="请输入不超过99个字" rows="3" maxlength="99"></textarea>
+                                                    <span class="wordsNum">0/99</span>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">转推</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="color-fun" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o te-fa"><span class="in-twelf">12K</span></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--row end-->
+                </div>
+                <!--card end-->
+                <div class="in-card d-flex card-body">
+                    <a class="in-d mr-4 max-576" href="#"><img class="in-d" src="./images/images.png" alt=""></a>
+                    <div class="textarea-mr card-body">
+                        <div class="anthor-forward">
+                            <i class="fa fa-share-square-o"></i>
+                            <span>Custer 转推了</span>
+                        </div>
+                        <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span class="in-te">·
+                                55m</span>
+                        </h5>
+                        <p class="card-text">
+                            这两颗卫星属于中圆地球轨道卫星，是中国北斗三号全球系统第13、14颗组网卫星。在这两颗北斗导航卫星上，还首次装载了国际搜救组织标准设备，将为全球用户提供遇险报警及定位服务。</p>
+                        <video src="./images/yu.mp4" controls class="w-78-15 mb-3"></video>
+                        <div class="b-action">
+                            <div class="b-action-left in-menu">
+                                <a class="color-fun" href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalLongd">
+                                    <i class="fa fa-commenting-o te-fa"><span class="in-twelf">0.1K</span></i>
+                                </a>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModalLongd" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLongTitleo" aria-hidden="true" style="display: none;">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitleo">回复框</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="textarea-mr card-body">
+                                                    <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span
+                                                            class="in-te">· 55m</span>
+                                                    </h5>
+                                                    <p class="card-text">
+                                                        这两颗卫星属于中圆地球轨道卫星，是中国北斗三号全球系统第13、14颗组网卫星。在这两颗北斗导航卫星上，还首次装载了国际搜救组织标准设备，将为全球用户提供遇险报警及定位服务。</p>
+                                                </div>
+                                            </div>
+                                            <!--row end-->
+                                            <div class="card in-background">
+                                                <div class="card-body pt-0">
+                                                    <p class="in-pap">
+                                                        <font>回复</font><a href="#">@ realDonaldTrump</a>
+                                                    </p>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+
+                                                        </div>
+                                                        <textarea class="form-control wishContent" aria-label="With textarea"
+                                                            placeholder="请输入不超过99个字" maxlength="99" rows="3"></textarea>
+                                                        <span class="wordsNum">0/99</span>
+                                                    </div>
+                                                    <div class="b-action">
+                                                        <div class="b-action-left">
+                                                            <button type="button" class="btn btn-primary mt-3 mb-3">发送
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Button trigger modal -->
+                                <a class="color-fun" href="javascript:void(0)" data-toggle="modal" data-target="#gridSystemModald">
+                                    <i class="fa fa-random te-fa"><span class="in-twelf">30K</span></i>
+                                </a>
+
+                                <div id="gridSystemModald" class="modal fade show" tabindex="-1" role="dialog"
+                                    aria-labelledby="gridModalLabelesd" aria-modal="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="gridModalLabelesd">转发给你的粉丝</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                        aria-hidden="true">×</span></button>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="textarea-mr card-body">
+                                                    <h5 class="card-title">奥巴马的见面会 <span class="in-te">@telangpu</span><span
+                                                            class="in-te"> · 55m</span>
+                                                    </h5>
+                                                    <p class="card-text">将为全球用户提供遇险报警及定位服务在这两颗北斗导航卫星上，还首。</p>
+                                                </div>
+                                            </div>
+                                            <div class="card-body pt-0">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                    </div>
+                                                    <textarea class="form-control wishContent" aria-label="With textarea"
+                                                        placeholder="请输入不超过99个字" rows="3" maxlength="99"></textarea>
+                                                    <span class="wordsNum">0/99</span>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">转推</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="color-fun" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o te-fa"><span class="in-twelf">12K</span></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--row end-->
+                </div>
+                <!--card end-->
+                <nav class="mt-5 mb-5">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link " href="#" tabindex="-1" aria-disabled="true">上一页</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item " aria-current="page">
+                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">下一页</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Button trigger modal -->
+
+            </div>
+        </div>
+    </div>
+    <input type="file" style="display: none" id="upload_image">
+</body>
+
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/javascript.js"></script>
+<script src="./js/dropzone.js"></script>
+<script src="./js/fun.js"></script>
+<script type="text/javascript">
+    var add = document.getElementById('add');
+    var container = document.getElementById('container');
+    var node = container.nextSibling;
+    add.onclick = function () {
+        oDiv = document.createElement('div');
+        oDiv.innerHTML =
+            "<div class=\"card in-cards\" id=\"container\">" +
+            "<div class=\"row\">" +
+            "<a href=\"#\"><img class=\"in-d\" src=\"./images/images.png\" alt=\"\"> " +
+            "<div class=\"card-body \">" +
+            "<div class=\"input-group\">" +
+            "<div class=\"input-group-prepend\">" +
+            "</div>" +
+            "<textarea class=\"form-control wishContent\" aria-label=\"With textarea\" placeholder=\"请输入不超过99个字\" maxlength=\"99\"></textarea>" +
+            "<span class=\"wordsNum\">0/99</span></div>" +
+            "<div class=\"b-action\">" +
+            "<div class=\"b-action-left\">" +
+            "<a class=\"in-add\" href=\"javascript:void(0)\">" +
+            "<form action=\"\" method=\"\" enctype=\"multipart/form-data\">" +
+            "<label for=\"my_file\" class=\"inputlabelBox\">" +
+            "<div class=\"inputBox\"><i class=\"fa fa-file-photo-o in-i-fa\"></i></div></label>" +
+            "<input type=\"file\" name=\"myfile\" id=\"my_file\" style=\"display:none;\"></form>" +
+            "<img src=\"\" id=\"img\" width=\"200\"></a>" +
+            "</div>" +
+            "</div><!--in-card-->\n" +
+            "</div><!--row end-->\n" +
+            "</div> <!--card end-->" +
+            "<button type='button' onclick='test(this)' value='' class='fa fa-trash-o fa-lg in-ty-btn'/></div>";
+        container.parentNode.insertBefore(oDiv, node)
+        node = oDiv.nextSibling;
+
+    }
+
+    function test(test) {
+        test.parentNode.parentNode.removeChild(test.parentNode);
+    }
+</script>
+<!--<script>
+    $("#dropz").dropzone({
+        url: "index.php", //必须填写
+        method:"post",  //也可用put
+        paramName:"Filedata", //默认为file
+        maxFiles:10,//一次性上传的文件数量上限
+        maxFilesize: 20, //MB
+        acceptedFiles: ".jpg,.gif,.png", //上传的类型
+        previewsContainer:"#adds", //显示的容器
+        parallelUploads: 3,
+        dictMaxFilesExceeded: "您最多只能上传10个文件！",
+        dictResponseError: '文件上传失败!',
+        dictInvalidFileType: "你不能上传该类型文件,文件类型只能是*.jpg,*.gif,*.png。",
+        dictFallbackMessage:"浏览器不受支持",
+        dictFileTooBig:"文件过大上传文件最大支持.",
+        previewTemplate: document.querySelector('#preview-template').innerHTML,//设置显示模板
+        init:function(){
+            this.on("addedfile", function(file) {
+                //上传文件时触发的事件
+            });
+            this.on("queuecomplete",function(file) {
+                //上传完成后触发的方法
+            });
+            this.on("removedfile",function(file){
+                //删除文件时触发的方法
+            });
+        }
+
+    });
+
+
+</script>-->
+
+
+</body>
+
+</html>
